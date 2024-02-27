@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IBAS-menu", "IBAS-menu.csproj", "{F2B61CB2-1B51-4058-A55E-14B363DA8670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2B61CB2-1B51-4058-A55E-14B363DA8670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B61CB2-1B51-4058-A55E-14B363DA8670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B61CB2-1B51-4058-A55E-14B363DA8670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B61CB2-1B51-4058-A55E-14B363DA8670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3238E4AA-971B-4D13-B3AC-12077C79DA09}
+	EndGlobalSection
+EndGlobal
