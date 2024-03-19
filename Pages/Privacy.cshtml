@@ -3,6 +3,48 @@
 @{
     ViewData["Title"] = "Privacy Policy";
 }
+
 <h1>@ViewData["Title"]</h1>
 
-<p>Not privat at all.</p>
+<p>Not private at all.</p>
+
+<div id="game-container">
+    <h2>Welcome to Guess the Number!</h2>
+    <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
+    <input type="number" id="user-guess" placeholder="Enter your guess">
+    <button id="submit-guess">Submit Guess</button>
+    <p id="guess-result"></p>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var numberToGuess = Math.floor(Math.random() * 100) + 1;
+            var attempts = 0;
+
+            var submitButton = document.getElementById("submit-guess");
+            submitButton.addEventListener("click", function () {
+                var userGuessInput = document.getElementById("user-guess");
+                var userGuess = parseInt(userGuessInput.value);
+                var guessResult = document.getElementById("guess-result");
+
+                if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                    guessResult.textContent = "Please enter a valid number between 1 and 100.";
+                    return;
+                }
+
+                attempts++;
+
+                if (userGuess < numberToGuess) {
+                    guessResult.textContent = "Too low! Try again.";
+                } else if (userGuess > numberToGuess) {
+                    guessResult.textContent = "Too high! Try again.";
+                } else {
+                    guessResult.textContent = "Congratulations! You guessed the number " + numberToGuess + " correctly in " + attempts + " attempts!";
+                    submitButton.disabled = true;
+                    userGuessInput.disabled = true;
+                }
+            });
+        });
+    </script>
+}
